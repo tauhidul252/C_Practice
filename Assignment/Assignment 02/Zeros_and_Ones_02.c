@@ -1,40 +1,46 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
 
-    int N;
-    scanf("%d",&N);
+    int N,X;
+    scanf("%d %d", &N, &X);
+
     int A[N];
 
-
-
-    for (int i = 1; i <=N; i++)
+    for (int i = 1; i <= N; i++)
     {
-        scanf("%d",&A[i]);
+        scanf("%d", &A[i]);
     }
 
-    int X;
-    scanf("%d",&X);
-    int B[X];
+     // int X;
+      //scanf("%d", &X);
 
-    for (int i = 1; i <=N; i++)
-    {
-       
-            if (B[X]==0)
+
+     if (A[X] == 0)
         {
-            printf("1");
+            A[X] = 1;
         }
-       else if(B[X]==1){
-            printf("0");
-         }
 
-         printf("%d ",A[i] );
+
+        else if(A[X] == 1)
+        {
+            A[X] = 0;
         }
-        
-    
-    
- printf("\n");
 
-    
+
+    for (int i = 1; i <= N; i++)
+    {
+
+       
+        printf("%d ", A[i]);
+    }
+
+    printf("\n");
+
+
+
+
+
     return 0;
 }
