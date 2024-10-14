@@ -3,8 +3,8 @@
 int main()
 {
 
-    int N,X;
-    scanf("%d %d", &N, &X);
+    int N;
+    scanf("%d", &N);
 
     int A[N];
 
@@ -13,16 +13,15 @@ int main()
         scanf("%d", &A[i]);
     }
 
-     // int X;
-      //scanf("%d", &X);
+      int X;
+      scanf("%d", &X);
 
 
      if (A[X] == 0)
         {
             A[X] = 1;
         }
-
-
+        
         else if(A[X] == 1)
         {
             A[X] = 0;
