@@ -21,7 +21,7 @@ int main()
         {
             if (A[i] == 0)
             {
-               printf("1 ");
+                printf("1 ");
             }
             else if (A[i] == 1)
             {
@@ -29,11 +29,8 @@ int main()
             }
         }
         else
-           printf("%d ",A[i]);
-
-
+            printf("%d ", A[i]);
     }
-    
-        
-     return 0;
+
+    return 0;
 }
