@@ -4,7 +4,7 @@ int a[100000],b[100000];
 
 int main(){
 
-    int lenth=0;
+    int lenth=0 , lenth2=0;
     scanf("%d",&lenth);
 
 
@@ -34,6 +34,8 @@ int main(){
         b[i]=a[i];  
     }
 
+    //a[2]=100;
+
       printf("\n \n");
     
     for (int i = 0; i <lenth; i++)
@@ -41,10 +43,13 @@ int main(){
         printf("%d ",a[i]);
 
     }
+   // b[2]=100; // array valu changes using index number
+
+    lenth2=lenth;
 
     printf("\n");
 
-    for (int i = 0; i <lenth; i++)
+    for (int i = 0; i <lenth2; i++)
     {
         printf("%d ",b[i]);
 
