@@ -7,7 +7,7 @@ int main(){
 
 
     if (N<=100 && K<=100)
-    
+
     {
          for (int i = 1; i <=N; i++)
      {
@@ -24,7 +24,6 @@ int main(){
 
 
 
-   
 
 
     return 0;
