@@ -1,32 +1,59 @@
-// #include <stdio.h>
-// int main()
-// {
-//  int a =(int) 50.45, b = 60, sum;
-//  sum = a + b;
-//  printf("%d + %d = %d", a, b, sum);
-//  return 0;
-// }
+#include <stdio.h>
+#include <string.h>
 
-#include<stdio.h>
 int main()
 {
-  int n;
-  scanf("%d",&n);
-  int ar[n];
-  for(int i=0;i<n;i++)  // এরে ইনপুট নেওয়া হচ্ছে। 
+
+  char S1[1001], S2[1001], S3[1001];
+
+  scanf("%s %s %s", S1, S2, S3);
+
+  char minStr[1001], maxStr[1001];
+
+  strcpy(minStr, S1);
+  strcpy(maxStr, S1);
+
+
+
+
+
+    if (strcmp(S2, minStr) < 0)
+      {
+         strcpy(minStr, S2);
+      }
+
+     if (strcmp(S2, maxStr) > 0)
+     {
+        strcpy(maxStr, S2);
+     }
+
+
+
+
+
+  if (strcmp(S3, minStr) < 0)
   {
-    scanf("%d",&ar[i]);
+    strcpy(minStr, S3);
   }
-  int sum=0;  // যোগফল রাখার জন্য একটি ভেরিয়েবল নিয়ে শুরুতে ০ রেখে দেওয়া হচ্ছে। 
-  //printf("%d",sum);
-  
-  for(int i=0;i<n;i++)  // লুপ চালিয়ে এরের প্রতিটি ইন্ডেক্সে যাচ্ছি। 
+
+  if (strcmp(S3, maxStr) > 0)
   {
-    sum=sum+ar[i]; // প্রতিটি ইন্ডেক্সে যেয়ে ভেলুগুলো সাম ভেরিয়েবলের সাথে যোগ করে দিচ্ছি।
+    strcpy(maxStr, S3);
   }
-  printf("%d",sum); // ভেরিয়েবলটি প্রিন্ট করে যোগফল প্রিন্ট করা হচ্ছে। 
+
+
+
+
+
+    printf("%s\n", minStr);
+    printf("%s\n", maxStr);
+
+
+
 
 
   return 0;
+
+
 
 }
