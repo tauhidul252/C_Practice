@@ -1,59 +1,43 @@
-#include <stdio.h>
-#include <string.h>
+#include<stdio.h>
 
-int main()
-{
+int main(){
+    int n;
+    scanf("%d",&n);
 
-  char S1[1001], S2[1001], S3[1001];
+    int m[n+5][n+5];
+    for(int i =0; i< n; i++){
+        for(int j =0;j< n ; j++){
+            scanf("%d",&m[i][j]);
+        }
+    }
 
-  scanf("%s %s %s", S1, S2, S3);
+    int elimant = m[0][0];
+    int flage = 1;
 
-  char minStr[1001], maxStr[1001];
+    for(int i = 0; i < n; i++){
+        for(int j =0; j < n; j++){
+            if(i==j){
+                if(m[i][j] != elimant){
+                    flage = 0;
+                    break;
+                }
+                }
+                else{
+                    if(m[i][j] != 0){
+                        flage =0;
+                        break;
+                    }
+            }
+        }
+        
+    }
 
-  strcpy(minStr, S1);
-  strcpy(maxStr, S1);
+    if(flage== 1){
+        printf("scaler");
+    }
+    else{
+        printf("No Scaler");
+    }
 
-
-
-
-
-    if (strcmp(S2, minStr) < 0)
-      {
-         strcpy(minStr, S2);
-      }
-
-     if (strcmp(S2, maxStr) > 0)
-     {
-        strcpy(maxStr, S2);
-     }
-
-
-
-
-
-  if (strcmp(S3, minStr) < 0)
-  {
-    strcpy(minStr, S3);
-  }
-
-  if (strcmp(S3, maxStr) > 0)
-  {
-    strcpy(maxStr, S3);
-  }
-
-
-
-
-
-    printf("%s\n", minStr);
-    printf("%s\n", maxStr);
-
-
-
-
-
-  return 0;
-
-
-
+    return 0;
 }
