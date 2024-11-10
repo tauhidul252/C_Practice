@@ -1,25 +1,47 @@
 #include <stdio.h>
 
-int main() {
-    int T;
-    scanf("%d", &T);  // Read number of test cases
-    
-    while (T--) {
-        int N;
-        scanf("%d", &N);  // Read the number N for each test case
-        
-        // Print increasing sequence from 1 to N
-        for (int i = 1; i <= N; i++) {
-            printf("%d ", i);
-        }
-        
-        // Print decreasing sequence from N-1 to 1
-        for (int i = N - 1; i >= 1; i--) {
-            printf("%d ", i);
-        }
-        
-        printf("\n");  // Move to the next line after each test case output
+int main()
+{
+    int N, M;
+    scanf("%d %d", &N, &M);
+
+    if (N != M)
+    {
+        printf("NO\n");
+        return 0;
     }
-    
+
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < M; j++)
+        {
+            int Input;
+            scanf("%d", &Input);
+
+            if ((i == j || i + j == N - 1))
+            {
+                if (Input != 1)
+                {
+                    printf("NO\n");
+                    return 0;
+                }
+            }
+            else
+            {
+                if (Input != 0)
+                {
+
+                    printf("NO\n");
+                    return 0;
+                }
+            }
+        }
+    }
+
+    printf("YES\n");
+
+
     return 0;
+
+
 }
