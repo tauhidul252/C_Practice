@@ -1,38 +1,25 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int a[100000],b[100000];
-
-int main(){
-    int n;
-    scanf("%d",&n);
-
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d",&a[i]);
-    }
-
-
+int main() {
+    int T;
+    scanf("%d", &T);  // Read number of test cases
     
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ",a[i]);
-    }
-
-  printf("\n");
-
-
-    for (int i = 0; i < n; i++)
-    {
-        b[i]=a[i];
+    while (T--) {
+        int N;
+        scanf("%d", &N);  // Read the number N for each test case
+        
+        // Print increasing sequence from 1 to N
+        for (int i = 1; i <= N; i++) {
+            printf("%d ", i);
+        }
+        
+        // Print decreasing sequence from N-1 to 1
+        for (int i = N - 1; i >= 1; i--) {
+            printf("%d ", i);
+        }
+        
+        printf("\n");  // Move to the next line after each test case output
     }
     
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ",b[i]);
-    }
-    
-
-
-
     return 0;
 }
