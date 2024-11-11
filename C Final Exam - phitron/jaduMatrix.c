@@ -2,56 +2,59 @@
 
 int main()
 {
+    int N, M;
+    scanf("%d %d", &N, &M);
 
-    int M,N;
+    if (N == M)
+    {
+        int I[N][M];
+        int flage = 1;
 
-    scanf("%d %d",&M,&N);
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = 0; j < M; j++)
+            {
 
-    if (M!=N)
+
+                scanf("%d", &I[i][j]);
+                
+
+                if ((i == j || i + j == N - 1))
+                {
+                    if (I[i][j] != 1)
+                    {
+                        flage = 0;
+                    }
+                }
+
+
+                else
+                {
+                    if (I[i][j] != 0)
+                    {
+                        flage = 0;
+                    }
+                }
+            }
+        }
+
+
+        if (flage)
+        {
+            printf("YES\n");
+        }
+        else
+        {
+            printf("NO\n");
+        }
+    }
+
+    else
     {
         printf("NO");
-       
     }
 
-    for (int i = 0; i < M; i++)
-    {
-        for (int j = 0; j < N; j++)
-        {
-            int I;
 
-            scanf("%d",&I);
-
-            if (i == j || i + j == N - 1)
-            {
-                if (I != 1)
-                {
-                    printf("NO\n");
-                    return 0;
-                
-                }
-            }
-
-            else
-            {
-                if (I != 1)
-                {
-                    printf("NO\n");
-                    return 0;
-                
-                }
-
-            }
-            
-
-
-        }
-        
-    }
-    
-     printf("YES\n");
-
-
-
-return 0;
+    return 0;
 
 }
