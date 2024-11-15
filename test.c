@@ -1,68 +1,48 @@
 #include <stdio.h>
-
-int I[100][100];
+#include <string.h>
 
 int main()
 {
-    int M, N;
-    scanf("%d %d", &M, &N);
+
+    char S1[101], S2[101], S3[101];
+
+    scanf("%s %s %s", S1, S2, S3);
+
+    int len = strlen(S1);
     
-    if (M == N)
+    int count = 0;
+
+    for (int i = 0; i < len; i++)
     {
+        char C1 = S1[i];
+        char C2 = S2[i];
+        char C3 = S3[i];
 
-       
-
-        for (int i = 0; i < M; i++)
+        if (C1 == C2 && C2 == C3)
         {
-            for (int j = 0; j < N; j++)
-            {
-                scanf("%d", &I[i][j]);
-            }
+            continue;
         }
 
-        int flage = 1;
 
-        for (int i = 0; i < M; i++)
+        else if (C1 == C2 || C1 == C3 || C2 == C3)
         {
-            for (int j = 0; j < N; j++)
-            {
-                if (i == j || j == M - i - 1)
-                {
-                    if (I[i][j] != 1)
-                    {
-                        flage = 0;
-                        break;
-                    }
-                }
-                else
-                {
-                    if (I[i][j] != 0)
-                    {
-                        flage = 0;
-                        break;
-                    }
-                }
-            }
-
-            if (!I)
-            {
-                break;
-            }
+            count += 1;
         }
 
-        if (flage == 1)
-        {
-            printf("YES");
-        }
+
         else
         {
-            printf("NO");
+            count += 2;
         }
+
+
     }
 
-    else
-    {
-        printf("NO");
-    }
+
+    printf("%d", count);
+
+
     return 0;
+
+
 }
