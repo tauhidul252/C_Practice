@@ -32,10 +32,7 @@ int main()
         
     }
     
-    printf("min : %d, max : %d \n",min,max);
-
-
-    
+    printf("min : %d, max : %d \n",min,max);   
 
     return 0;
 }
