@@ -28,8 +28,8 @@ int main()
             max = a[i];
         }
 
-
-        
+            // How to work Max Min in backend
+            printf("min : %d, max : %d \n",min,max);   
     }
     
     printf("min : %d, max : %d \n",min,max);   
